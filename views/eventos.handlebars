@@ -1,0 +1,35 @@
+<div class="container mt-4">
+    <h2 class="mb-4">Lista de Eventos</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{!-- Os eventos serão listados aqui --}}
+                {{#each eventos}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{nome}}</td>
+                    <td>{{data}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        
+        <h2 class="mt-5">Adicionar Novo Evento</h2>
+        <form action="/" method="post" >
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome do Evento</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="mb-3">
+                <label for="data" class="form-label">Data</label>
+                <input type="date" class="form-control" id="data" name="data" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Adicionar Evento</button>
+        </form>
+</div>
